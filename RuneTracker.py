@@ -67,9 +67,13 @@ def Claninfo():
   
     # Dropping old Name columns 
     data.drop(columns =["Clanmate, Clan Rank, Total XP, Kills"], inplace = True) 
-  
+
     # df display 
     print(data)
+    csv = input("Would you like to save the data to a csv file?: ")
+    if csv.lower() == "yes":
+        filename = input("What would you like to name this file?: ")
+        data.to_csv(filename + '.csv', encoding='utf-8')
     main()
 
 def CombatLvlCalc():
