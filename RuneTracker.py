@@ -42,7 +42,7 @@ def PlayerDetails():
     print("Name: " + runedata.json()["name"])
     print("Total Skill Level: " + str(runedata.json()["totalskill"]))
     print("Combat Level: " + str(runedata.json()["combatlevel"]))
-    print("Logged in: " + runedata.json()["loggedIn"])
+    print("Logged in: " + runedata.json()["loggedIn"] + "\n")
 
     for activities in runedata.json()["activities"]:
         print(activities["date"])
